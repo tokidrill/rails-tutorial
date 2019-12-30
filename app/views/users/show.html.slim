@@ -6,6 +6,11 @@ p
 p
   strong Email:
   = @user.email
+p
+  strong Post:
+  ol
+    - @microposts.each do |micropost|
+      li = micropost.content
 
 => link_to 'Edit', edit_user_path(@user)
 '|
